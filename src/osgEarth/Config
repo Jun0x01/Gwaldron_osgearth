@@ -1,6 +1,6 @@
 /* -*-c++-*- */
 /* osgEarth - Geospatial SDK for OpenSceneGraph
- * Copyright 2018 Pelican Mapping
+ * Copyright 2019 Pelican Mapping
  * http://osgearth.org
  *
  * osgEarth is free software; you can redistribute it and/or modify
@@ -573,10 +573,7 @@ namespace osgEarth
             fromConfig(conf); \
         } \
     public: \
-        OE_COMMENT("Construct empty layer options") \
         MYCLASS () : SUPERCLASS() { fromConfig(_conf); } \
-        \
-        OE_COMMENT("Construct layer options from serialized data") \
         MYCLASS (const ConfigOptions& opt) : SUPERCLASS(opt) { fromConfig(_conf); }
 
 //! optional property macro

@@ -1,6 +1,6 @@
 /* -*-c++-*- */
 /* osgEarth - Geospatial SDK for OpenSceneGraph
-* Copyright 2018 Pelican Mapping
+* Copyright 2019 Pelican Mapping
 * http://osgearth.org
 *
 * osgEarth is free software; you can redistribute it and/or modify
@@ -403,6 +403,7 @@ MapNode::init()
     osg::Material* defaultMaterial = new MaterialGL3();
     defaultMaterial->setDiffuse(defaultMaterial->FRONT, osg::Vec4(1,1,1,1));
     defaultMaterial->setAmbient(defaultMaterial->FRONT, osg::Vec4(1,1,1,1));
+    //defaultMaterial->setSpecular(defaultMaterial->FRONT, osg::Vec4(1,0,0,1));
     stateset->setAttributeAndModes(defaultMaterial, 1);
     MaterialCallback().operator()(defaultMaterial, 0L);
 

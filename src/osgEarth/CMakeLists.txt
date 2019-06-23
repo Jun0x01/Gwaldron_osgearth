@@ -69,6 +69,7 @@ configure_shaders(
 SET(HEADER_PATH ${OSGEARTH_SOURCE_DIR}/include/${LIB_NAME})
 
 SET(LIB_PUBLIC_HEADERS
+    Async
     Bounds
     Cache
     CacheEstimator
@@ -128,6 +129,7 @@ SET(LIB_PUBLIC_HEADERS
     LandCoverLayer
     Layer
     LayerListener
+    LayerShader
     Lighting
     LineDrawable
     LineFunctor
@@ -183,7 +185,7 @@ SET(LIB_PUBLIC_HEADERS
     StateSetCache
     Status
     StringUtils
-    TDTiles
+    #TDTiles
     TaskService
     Terrain
     TerrainEffect
@@ -250,6 +252,7 @@ IF (OSGEARTH_EMBED_GIT_SHA)
 ENDIF (OSGEARTH_EMBED_GIT_SHA)
 
 set(TARGET_SRC
+    Async.cpp
     Bounds.cpp
     Cache.cpp
     CacheBin.cpp
@@ -303,6 +306,7 @@ set(TARGET_SRC
     LandCover.cpp
     LandCoverLayer.cpp
     Layer.cpp
+    LayerShader.cpp
     Lighting.cpp
     LineDrawable.cpp
     Locators.cpp
@@ -352,7 +356,7 @@ set(TARGET_SRC
     Status.cpp
     StringUtils.cpp
     TaskService.cpp
-    TDTiles.cpp
+    #TDTiles.cpp
     Terrain.cpp
     TerrainLayer.cpp
     TerrainOptions.cpp
